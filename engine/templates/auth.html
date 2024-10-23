@@ -5,15 +5,16 @@
 <div class="row">
     <div class="col s12">
         <div class="row">
-            <form action="{{ url_for('login') }}">
+            <form action="{{ url_for('home') }}" method="POST">
+                <input type="hidden" name="form_type" value="login">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">textsms</i>
-                    <input type="text" id="username" class="autocomplete">
+                    <input type="text" id="username" name="username" class="autocomplete">
                     <label for="username">Username</label>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">add_circle</i>
-                    <input type="text" id="password" class="autocomplete">
+                    <input type="text" id="password" name="password" class="autocomplete">
                     <label for="password">Password</label>
                 </div>
 
@@ -29,20 +30,26 @@
 <div class="row">
     <div class="col s12">
         <div class="row">
-            <form action="{{ url_for('register') }}" method="POST">
+            <form action="{{ url_for('auth') }}" method="POST">
+                <input type="hidden" name="form_type" value="register">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">textsms</i>
-                    <input type="text" id="full_name" class="autocomplete">
-                    <label for="full_name">Full Name</label>
+                    <input type="text" id="name" name="name" class="autocomplete">
+                    <label for="name">Full Name</label>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">add_circle</i>
-                    <input type="email" id="email" class="autocomplete">
+                    <input type="email" id="email" name="email" class="autocomplete">
                     <label for="email">Email</label>
                 </div>
                 <div class="input-field col s12">
+                    <i class="material-icons prefix">textsms</i>
+                    <input type="text" id="username" name="username" class="autocomplete">
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-field col s12">
                     <i class="material-icons prefix">add_circle</i>
-                    <input type="password" id="password" class="autocomplete">
+                    <input type="password" id="password" name="password" class="autocomplete">
                     <label for="password">Password</label>
                 </div>
 
